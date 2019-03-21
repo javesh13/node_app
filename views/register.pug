@@ -1,0 +1,43 @@
+doctype html
+|
+|
+script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+|
+|
+script( src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
+|
+|
+script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+|
+|
+link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+|
+|
+block content
+  .main.container
+    .row
+        .col-md-4
+            h1.display-4.m-b-2 Sign Up
+
+            // register form
+            form(method='POST' action='/register')
+                div.form-group
+                    label(for='name') Name:
+                    input#name.form-control(type='text', placeholder='first and last' name='name')
+                div.form-group
+                    label(for='email') Email:
+                    input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                div.form-group
+                    label(for='pw') Password:
+                    input#pw.form-control(type='password' name='password')
+                div.form-group
+                    label(for='pw2') Confirm Password:
+                    input#pw2.form-control(type='password' name='confirmPassword')
+                button.btn.btn-primary(type='submit') Sign up
+        
+        .col-md-4.col-md-offset-4
+            span Your key will be mailed to you.
+            br
+            span You can make only 10 requests there after you will have to create a new account.
+    
+            
